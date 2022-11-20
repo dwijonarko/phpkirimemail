@@ -2,7 +2,18 @@
 The unofficial PHP client library for the [Kirim.Email](https://kirim.email) Marketing API. Official documentation for Kirim.Email Marketing api is [here](https://documenter.getpostman.com/view/23706886/2s83zduQge)
 
 ## Instalation
-### Option 1: Install via Packagist (TBA)
+### Option 1: Install via Packagist 
+```
+composer require --dev dwijonarko/php-kirimemail:dev-main
+```
+Or add the following to `composer.json`
+```
+{
+  "require": {
+    "dwijonarko/php-kirimemail": "dev-main"
+  }
+}
+```
 ### Option 2: Install Manually
 Clone the repo
 
@@ -13,32 +24,20 @@ In the client library project root, install all dependencies
  Manually include `vendor/autoload.php` in your implementation
 
 ## Quick Start
+```
+<?php
+require_once('vendor/autoload.php');
+use Dwijonarko\PHPKirimemail\Lists;
+$config= [
+    'username'=>'YOURUSERNAME',
+    'api_token'=>'YOUR KIRIM EMAIL API TOKEN'
+];
 
-   
+$lists = new Lists($config);
+$result = $lists->getAll();
+var_dump($result);
 
-     <?php
-    
-    use Dwijonarko\PHPKirimemail\KontakApi;
-    use Dwijonarko\PHPKirimemail\Lists;
-    use Dotenv\Dotenv;
-    use Dwijonarko\PHPKirimemail\Subscribers;
-    
-    require_once 'vendor/autoload.php';
-    
-    //if you use .env
-    $dotenv = Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-    
-    //create config array
-    $config = [
-      'api_token' => $_ENV['KIRIMEMAIL_TOKEN'],
-      'username' => $_ENV['KIRIMEMAIL_USERNAME']
-    ];
-    
-    //create subscriber instance with config
-    $subscribers = new Subscribers($config);
-    var_dump($subscribers->getAll());
-
+```
 ## Functions
 ### List
  1. Get All Lists
