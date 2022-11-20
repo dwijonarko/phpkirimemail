@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 class KontakApi
 {
 
-    private const BASEAPIURL = "https://appstaging.kirim.email/api/v3";
+    private const BASEAPIURL = "https://api.kirim.email/v3";
 
     protected $username;
     protected $api_token;
