@@ -1,2 +1,1 @@
-# phpkirimemail
-PHP Class form Kirim Email Marketing API
+#PHP Class for Kirimemail Marketing API

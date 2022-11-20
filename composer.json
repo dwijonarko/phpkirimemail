@@ -1,0 +1,27 @@
+{
+    "name": "dwijonarko/php-kirimemail",
+    "description": "PHP helpers to comunicate with kirimemail api marketing easily",
+    "type": "helpers",
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.5",
+        "phpunit/phpunit": "^9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dwijonarko\\PHPKirimemail\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Dwi Wijonarko",
+            "email": "me@dudu.web.id"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
